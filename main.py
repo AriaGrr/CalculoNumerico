@@ -161,8 +161,8 @@ print('R2 Idade e Devedor Cartão:', r2_score(Ydevedorcartao, Ydevedorcartao_pre
 # X e Y
 print('R2 Salario e Inadimplente:', r2_score(Yinadimplente, Yinadimplente_pred))
 
-# # Coeficiente de correlação (VERIFICAR)
-# # X e Y
+# Coeficiente de correlação (VERIFICAR)
+# X e Y
 # print('Coeficiente de correlação Idade e Salario:', np.corrcoef(Xidade.T, Ysalario.T))
 
 # # X e Y
@@ -177,3 +177,189 @@ print('R2 Salario e Inadimplente:', r2_score(Yinadimplente, Yinadimplente_pred))
 # # X e Y
 # print('Coeficiente de correlação Salario e Inadimplente:', np.corrcoef(Xsalario.T, Yinadimplente.T))
 
+# print('Coeficiente de correlação Idade e Salario:', np.corrcoef(Xidade.flatten(), Ysalario.flatten()))
+
+# print('Coeficiente de correlação Saldo Poupança e Saldo CC:', np.corrcoef(Xsaldopoupanca.flatten(), Ysaldocc.flatten()))
+
+# print('Coeficiente de correlação Salario e Devedor Cartão:', np.corrcoef(Xsalario.flatten(), Ydevedorcartao.flatten()))
+
+# print('Coeficiente de correlação Idade e Devedor Cartão:', np.corrcoef(Xidade.flatten(), Ydevedorcartao.flatten()))
+
+# print('Coeficiente de correlação Salario e Inadimplente:', np.corrcoef(Xsalario.flatten(), Yinadimplente.flatten()))
+
+# Verificar o formato dos arrays
+# print("Dar reshape no Y")
+# print(Xidade.shape)
+# print(Ysalario.shape)
+# print(Xsaldopoupanca.shape)
+# print(Ysaldocc.shape)
+# print(Xsalario.shape)
+# print(Ydevedorcartao.shape)
+# print(Xidade.shape)
+# print(Ydevedorcartao.shape)
+# print(Xsalario.shape)
+# print(Yinadimplente.shape)
+
+# reshape() para ajustar dimensões antes de calcular correlação
+
+# # Verificando as formas e ajustando
+# for arr in [Xidade, Ysalario, Xsaldopoupanca, Ysaldocc, Xsalario, Ydevedorcartao, Yinadimplente]:
+#     print(arr.shape)
+#     if len(arr.shape) == 1:
+#         arr = arr.reshape(-1, 1)
+
+# Ysaldocc = np.array(Ysaldocc).reshape(-1, 1)
+# Ydevedorcartao = np.array(Ydevedorcartao).reshape(-1, 1)
+# Yinadimplente = np.array(Yinadimplente).reshape(-1, 1)
+# Ysalario = np.array(Ysalario).reshape(-1, 1)
+# print(Ysaldocc)
+# print(Ydevedorcartao)
+# print(Yinadimplente)
+# print(Ysalario)
+
+# # Calculando as correlações
+# corr_coef_idade_salario = np.corrcoef(Xidade.T, Ysalario.T)[0, 1]
+
+# corr_coef_saldopoupanca_saldocc = np.corrcoef(Xsaldopoupanca.T, Ysaldocc.T)[0, 1]
+
+# corr_coef_salario_devedorcartao = np.corrcoef(Xsalario.T, Ydevedorcartao.T)[0, 1]
+
+# corr_coef_idade_devedorcartao = np.corrcoef(Xidade.T, Ydevedorcartao.T)[0, 1]
+
+# corr_coef_salario_inadimplente = np.corrcoef(Xsalario.T, Yinadimplente.T)[0, 1]
+
+# # ... (calcular outras correlações)
+
+# print('Coeficiente de correlação Idade e Salario:', corr_coef_idade_salario)
+
+# print('Coeficiente de correlação Saldo Poupança e Saldo CC:', corr_coef_saldopoupanca_saldocc)
+
+# print('Coeficiente de correlação Salario e Devedor Cartão:', corr_coef_salario_devedorcartao)
+
+# print('Coeficiente de correlação Idade e Devedor Cartão:', corr_coef_idade_devedorcartao)
+
+# print('Coeficiente de correlação Salario e Inadimplente:', corr_coef_salario_inadimplente)
+
+# Ysaldocc = np.array(Ysaldocc).reshape(-1, 1)
+# Ydevedorcartao = np.array(Ydevedorcartao).reshape(-1, 1)
+# Yinadimplente = np.array(Yinadimplente).reshape(-1, 1)
+# Ysalario = np.array(Ysalario).reshape(-1, 1)
+# print(Ysaldocc)
+# print(Ydevedorcartao)
+# print(Yinadimplente)
+# print(Ysalario)
+
+# print(Ysaldocc.shape)
+# print(Ysalario.shape)
+# print(Ydevedorcartao.shape)
+# print(Yinadimplente.shape)
+# print(Xidade.shape)
+# print(Xsalario.shape)
+# print(Xsaldopoupanca.shape)
+
+# # print(Ysalario.dtype)
+# # print(Xsalario.dtype)
+
+# # print(np.unique(Ysalario))
+
+# # Tentar converter para numérico e lidar com NaN
+# try:
+#     Ysalario = pd.to_numeric(Ysalario, errors='coerce')
+#     Ysalario.dropna(inplace=True)  # Remover linhas com NaN
+# except ValueError:
+#     print("Não foi possível converter todos os valores para numérico.")
+# np.isnan(Ysalario).any()
+# np.isinf(Ysalario).any()
+# Ysaldocc.dtype
+# Calculando as correlações
+# corr_coef_idade_salario = np.corrcoef(Xidade.T, Ysalario.T)[0, 1]
+
+# corr_coef_saldopoupanca_saldocc = np.corrcoef(Xsaldopoupanca.T, Ysaldocc.T)[0, 1]
+
+# corr_coef_salario_devedorcartao = np.corrcoef(Xsalario.T, Ydevedorcartao.T)[0, 1]
+
+# corr_coef_idade_devedorcartao = np.corrcoef(Xidade.T, Ydevedorcartao.T)[0, 1]
+
+# corr_coef_salario_inadimplente = np.corrcoef(Xsalario.T, Yinadimplente.T)[0, 1]
+
+# # ... (calcular outras correlações)
+
+# print('Coeficiente de correlação Idade e Salario:', corr_coef_idade_salario)
+
+# print('Coeficiente de correlação Saldo Poupança e Saldo CC:', corr_coef_saldopoupanca_saldocc)
+
+# print('Coeficiente de correlação Salario e Devedor Cartão:', corr_coef_salario_devedorcartao)
+
+# print('Coeficiente de correlação Idade e Devedor Cartão:', corr_coef_idade_devedorcartao)
+
+# print('Coeficiente de correlação Salario e Inadimplente:', corr_coef_salario_inadimplente)
+
+
+# # print(Ysaldocc.shape)
+# print(Ysalario.shape)
+# # print(Ydevedorcartao.shape)
+# # print(Yinadimplente.shape)
+# print(Xidade.shape)
+# # print(Xsalario.shape)
+# # print(Xsaldopoupanca.shape)
+
+# print(Ysalario.dtype)
+# print(Xidade.dtype)
+# print(Ysalario)
+# print(Xidade)
+
+# Xidade = Xidade.astype(np.float64)
+# Ysalario = Ysalario.astype(np.float64)
+# print(Ysalario)
+# print(Xidade)
+
+# print(Ysalario.dtype)
+# print(Xidade.dtype)
+# print(Ysalario)
+# print(Xidade)
+
+# Converter todos para float
+# X
+Xsalario = Xsalario.astype(np.float64)
+Xsaldopoupanca = Xsaldopoupanca.astype(np.float64)
+Xidade = Xidade.astype(np.float64)
+# Y
+Ysalario = Ysalario.astype(np.float64)
+Ysaldocc = Ysaldocc.astype(np.float64)
+Ydevedorcartao = Ydevedorcartao.astype(np.float64)
+Yinadimplente = Yinadimplente.astype(np.float64)
+
+# print(Xidade)
+# print(Xsalario)
+# print(Xsaldopoupanca)
+
+# print(Ysaldocc)
+# print(Ydevedorcartao)
+# print(Yinadimplente)
+# print(Ysalario)
+
+print('Coeficiente de correlação Idade e Salario: \n')
+
+# print(np.corrcoef(Xidade, Ysalario))
+# print("\n")
+print(np.corrcoef(Xidade.T, Ysalario.T))
+print("\n")
+# print(np.corrcoef(Xidade.T, Ysalario.T)[0, 1])
+# print("\n")
+# print(np.corrcoef(Xidade.flatten(), Ysalario.flatten()))
+
+print('Coeficiente de correlação Saldo Poupança e Saldo CC: \n')
+print(np.corrcoef(Xsaldopoupanca.T, Ysaldocc.T))
+print("\n")
+
+print('Coeficiente de correlação Salario e Devedor Cartão: \n')
+print(np.corrcoef(Xsalario.T, Ydevedorcartao.T))
+print("\n")
+
+print('Coeficiente de correlação Idade e Devedor Cartão: \n')
+print(np.corrcoef(Xidade.T, Ydevedorcartao.T))
+print("\n")
+
+print('Coeficiente de correlação Salario e Inadimplente: \n')
+print(np.corrcoef(Xsalario.T, Yinadimplente.T))
+print("\n")
