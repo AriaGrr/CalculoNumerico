@@ -134,3 +134,20 @@ print('R2 Idade e Devedor Cartão:', r2_score(Ydevedorcartao, Ydevedorcartao_pre
 
 # X e Y
 print('R2 Salario e Inadimplente:', r2_score(Yinadimplente, Yinadimplente_pred))
+
+# # Coeficiente de correlação (VERIFICAR)
+# # X e Y
+# print('Coeficiente de correlação Idade e Salario:', np.corrcoef(Xidade.T, Ysalario.T))
+
+# # X e Y
+# print('Coeficiente de correlação Saldo Poupança e Saldo CC:', np.corrcoef(Xsaldopoupanca.T, Ysaldocc.T))
+
+# # X e Y
+# print('Coeficiente de correlação Salario e Devedor Cartão:', np.corrcoef(Xsalario.T, Ydevedorcartao.T))
+
+# # X e Y
+# print('Coeficiente de correlação Idade e Devedor Cartão:', np.corrcoef(Xidade.T, Ydevedorcartao.T))
+
+# # X e Y
+# print('Coeficiente de correlação Salario e Inadimplente:', np.corrcoef(Xsalario.T, Yinadimplente.T))
+
