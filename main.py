@@ -53,16 +53,42 @@ modelo4 = LinearRegression().fit(Xidade, Ydevedorcartao)
 modelo5 = LinearRegression().fit(Xsalario, Yinadimplente)
 
 # Print dos modelos
-print(modelo1.intercept_)
-print (modelo1.coef_)
-print(modelo2.intercept_)
-print (modelo2.coef_)
-print(modelo3.intercept_)
-print (modelo3.coef_)
-print(modelo4.intercept_)
-print (modelo4.coef_)
-print(modelo5.intercept_)
-print (modelo5.coef_)
+print("Modelos: Intercepto e Coeficiente")
+print("Modelo 1: Idade e Salario")
+# print(modelo1)
+print("Intercepto:", modelo1.intercept_)
+print("Coeficiente:", modelo1.coef_)
+# print(modelo1.intercept_)
+# print (modelo1.coef_)
+
+print("Modelo 2: Saldo Poupança e Saldo CC")
+# print(modelo2)
+print("Intercepto:", modelo2.intercept_)
+print("Coeficiente:", modelo2.coef_)
+# print(modelo2.intercept_)
+# print (modelo2.coef_)
+
+print("Modelo 3: Salario e Devedor Cartão")
+# print(modelo3)
+print("Intercepto:", modelo3.intercept_)
+print("Coeficiente:", modelo3.coef_)
+# print(modelo3.intercept_)
+# print (modelo3.coef_)
+
+print("Modelo 4: Idade e Devedor Cartão")
+# print(modelo4)
+print("Intercepto:", modelo4.intercept_)
+print("Coeficiente:", modelo4.coef_)
+# print(modelo4.intercept_)
+# print (modelo4.coef_)
+
+print("Modelo 5: Salario e Inadimplente")
+print(modelo5)
+print("Intercepto:", modelo5.intercept_)
+print("Coeficiente:", modelo5.coef_)
+# print(modelo5.intercept_)
+# print (modelo5.coef_)
+
 
 # Previsão
 # Y
